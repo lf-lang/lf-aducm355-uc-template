@@ -1,6 +1,4 @@
-target uC {
-  logging: Info
-};
+target uC
 
 main reactor {
     preamble {=
