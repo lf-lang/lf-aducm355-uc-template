@@ -28,7 +28,7 @@ This template is based on integrating the LF toolchain into Keil uVision. Please
 
 For more information on this issue, see: https://github.com/analogdevicesinc/aducm355-examples/issues/11
 
-To verify that you have correctly installed Keil uVision, open the example Keil uVision project found in ![](HelloWorld/M355_GPIO/ARM/M355_GPIO.uvprojx), Rebuild and Download the program onto a connected ADuCM355 eval board using the provided JLink. See ![](HelloWorld/README.md) for more info
+To verify that you have correctly installed Keil uVision, open the example Keil uVision project found in [M355_GPIO.uvprojx](HelloWorld/M355_GPIO/ARM/M355_GPIO.uvprojx), Rebuild and Download the program onto a connected ADuCM355 eval board using the provided JLink. See [README](HelloWorld/README.md) for more info
 
 ### Lingua Franca
 The Lingua Franca Compiler requires Java 17. Install a JDK of choice, e.g. OpenJDK from [here](https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-17).
@@ -58,6 +58,9 @@ Open the Blinky project in Keil uVision. Inspect [Blinky.lf](Blinky/src/Blinky.l
 
 This will generate source files for Blinky.lf into a a folder called `src-gen`, the generated sources are already added to the Keil project. After running the build script, Keil will build all the sources and produce an binary. Download it onto a connected board and watch LED DS2 blink.
 
+
+## Further topics
+
 ### Adding more LF sources or reactors
 Currently, we must add the generated sources to the Keil project manually. This means that if you add more reactors to your program, you must manually configure the Keil project to include the generated sources in the build. Each reactor declaration which is used, will result in a source file generated to `src-gen/$PROGRAM_NAME/$LF_FILE_NAME/ReactorName`. If you add more LF sources you have to also add the generated sources accordingly.
 
@@ -70,6 +73,8 @@ A special compile definition `LF_BUSY_WAIT` is provided to make the runtime do b
 ### Creating a new project
 Create a new project by copying the Blinky project. 
 
+### Decouple Keil uVision and LFC
+Another alternative is to decouple the Keil uVision IDE and the Lingua Franca Compiler. Go to `Options for target`->`User` and remove the invokation of the `build.ps1` script. Now you must manually call `lfc` either from the terminal, or through `build.ps1` every time you modify the LF sources and then press Build or Rebuild in Keil to compile the project.
 
 ## Troubleshooting
 
