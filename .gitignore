@@ -19,12 +19,19 @@ Objects/
 *.xlsx
 *.bmp
 *.txt
-*.ini
+*.lnp
 *.dep
 *.scvd
+*.inp
 *.o
+*.lst
+*.map
+*.htm
+*.axf
+*.d
 *.ewt
 *.custom_argvars
 *.project
+*.iex
 
 	
