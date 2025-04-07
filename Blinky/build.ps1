@@ -2,6 +2,8 @@
 # on the file specified in $MAIN. It is meant to be invoked pre-build
 # by Keil uVision 5.
 
+
+# This script will compile the file found at src/$MAIN.lf
 $MAIN="Blinky"
 
 try {
