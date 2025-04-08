@@ -30,6 +30,8 @@ For more information on this issue, see: https://github.com/analogdevicesinc/adu
 
 To verify that you have correctly installed Keil uVision, open the example Keil uVision project found in [M355_GPIO.uvprojx](HelloWorld/M355_GPIO/ARM/M355_GPIO.uvprojx), Rebuild and Download the program onto a connected ADuCM355 eval board using the provided JLink. See [README](HelloWorld/README.md) for more info
 
+Open Putty to read the printf's coming from the board. The baud rate is 115200 8N1.
+
 ### Lingua Franca
 The Lingua Franca Compiler requires Java 17. Install a JDK of choice, e.g. OpenJDK from [here](https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-17).
 
